@@ -1,0 +1,28 @@
+CXX = g++
+
+CXXFLAGS = -Wall -Wno-uninitialized -std=c++11
+
+BINARIES= test_tallyTheVote test_countVotes test_votedOut
+
+COMMON_OBJECT_FILES = survivor.o tddFuncs.o 
+
+all: ${BINARIES}
+
+tests: ${BINARIES}
+	./test_countVotes 1
+	./test_tallyTheVote 1
+	./test_votedOut 1
+	
+
+test_countVotes: test_countVotes.o ${COMMON_OBJECT_FILES}
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
+
+test_votedOut: test_votedOut.o ${COMMON_OBJECT_FILES}
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
+
+test_tallyTheVote: test_tallyTheVote.o ${COMMON_OBJECT_FILES}
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
+
+
+clean:
+	/bin/rm -f ${BINARIES} *.o
