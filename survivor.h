@@ -9,8 +9,7 @@ using std::string;
 //    write down the name of a competitor they would like to vote out of the game. The **Parchment**
 //    are placed in a **votingUrn** and the vote are tallied. The player with the most votes is
 //    eliminated (voted out). However, there is a twist. The **HiddenImmunityIdol** is an advantage that
-//    can be used on a target to nullify any votes cast against them. For today,
-//    we are not interested in who gets voted out but rather what the valid votes are.
+//    can be used on a target to nullify any votes cast against them. 
 
 //  ******************** PARCHMENT STRUCT ********************
 //    A Parchment type object contains three member variables: voter, vote, and next.
@@ -35,18 +34,18 @@ struct HiddenImmunityIdol
 };
 //  ********************  Problem 1 (15 pts): YOUR TASK: IMPLEMENT countVotes() ********************
 //  This function takes as input:
-//     allVotes: pointer to the first Parchment of votes;
+//     validVotes: pointer to the first Parchment of valid votes at tribal council;
 //               think of this as a pointer to the first element of a linked list.
-//     candidate: name of a the candidate to count votes for
+//     candidate: name of the castaway to count votes for
 //  The function should return:
 //               the number of votes cast for candidate
 //   Your implementation must be recursive to receive full credit.
 //   Non-recursive implementations will receive a maximum of 10 points.
-int countVotes(Parchment *allVotes, string candidate);
+int countVotes(Parchment *validVotes, string candidate);
 
 //  ********************  Problem 2 (10 pts): YOUR TASK: IMPLEMENT votedOut() ********************
 //  This function takes as input:
-//    validVotes: pointer to the first Parchment of valid votes;
+//    validVotes: pointer to the first Parchment of valid votes at tribal council;
 //               think of this as a pointer to the first element of a linked list.
 //  The function should return:
 //               the name of the person that should be voted out.
@@ -60,13 +59,16 @@ string votedOut(Parchment *validVotes);
 //
 //  This function takes as input:
 //    votingUrn: pointer to the first Parchment cast at tribal council;
-//               think of this as a pointer to the first element of a linked list.
+//               think of this as a pointer to the first element of a linked list;
+//               you can assume these Parchments are allocated on the heap.
 //    idolUsed: a hidden immunity idol that was played at tribal council;
 //              any votes cast against the target of this idol do not count.
 
 //  The function should return:
 //    a pointer to the first element of a linked list of valid Parchment objects;
-//    the valid votes must be in the same order as provided in the votingUrn.
+//    the valid votes must be in the same order as provided in the votingUrn;
+//    you cannot make a copy of the Parchments -- that is, 
+//    you must return the same Parchments as provided in the input 
 
 //  Example: Season 29, San Jan Del Sur, Blood vs Water 2, Final 5
 //    Baylor votes Jaclyn
