@@ -66,7 +66,9 @@ string votedOut(Parchment *validVotes);
 
 //  The function should return:
 //    a pointer to the first element of a linked list of valid Parchment objects;
-//    the valid votes must be in the same order as provided in the votingUrn.
+//    the valid votes must be in the same order as provided in the votingUrn;
+//    you cannot make a copy of the Parchments -- that is, 
+//    you must return the same Parchments as provided in the input 
 
 //  Example: Season 29, San Jan Del Sur, Blood vs Water 2, Final 5
 //    Baylor votes Jaclyn
