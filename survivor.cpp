@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-int countVotes(Parchment *allVotes, string candidate)
+int countVotes(Parchment *validVotes, string candidate)
 {
     //IMPLEMENT YOUR CODE HERE
 }
