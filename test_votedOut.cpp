@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
             Parchment *v1 = new Parchment{"Keith", "Jaclyn", v2};
             Parchment *sanJuanDelSurUrn = v1;
 
-            assertEquals(votedOut(sanJuanDelSurUrn), "Jaclyn", "Test 1");
+            assertEquals( "Jaclyn", votedOut(sanJuanDelSurUrn), "Test 1");
         }
         else if (testNum == 2)
         {
             START_TEST_GROUP("VOTED_OUT 2");
-            assertEquals(votedOut(nullptr), "", "Test 2");
+            assertEquals( "", votedOut(nullptr), "Test 2");
         }
         else if (testNum == 3)
         {
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
             Parchment *v2 = new Parchment{"Jaclyn", "Baylor", v3};
             Parchment *v1 = new Parchment{"Keith", "Jaclyn", v2};
             Parchment *sanJuanDelSurUrn = v1;
-            assertEquals(votedOut(sanJuanDelSurUrn), "Jaclyn", "Test 3");
+            assertEquals("Jaclyn", votedOut(sanJuanDelSurUrn), "Test 3");
         }
         
     }

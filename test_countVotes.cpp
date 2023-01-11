@@ -26,17 +26,17 @@ int main(int argc, char *argv[])
     {
       START_TEST_GROUP("COUNT_VOTES 1");
       // Test 1: Provided Example
-      assertEquals(countVotes(sanJuanDelSurUrn, "Keith"), 0, "Test 1: countVotes(sanJuanDelSurUrn, \"Keith\")");
+      assertEquals( 0, countVotes(sanJuanDelSurUrn, "Keith"), "Test 1: countVotes(sanJuanDelSurUrn, \"Keith\")");
     }
     else if (testNum == 2)
     {
       START_TEST_GROUP("COUNT_VOTES 2");
-      assertEquals(countVotes(sanJuanDelSurUrn, "Jaclyn"), 3, "Test 2: countVotes(sanJuanDelSurUrn, \"Jaclyn\")");
+      assertEquals( 3, countVotes(sanJuanDelSurUrn, "Jaclyn"),"Test 2: countVotes(sanJuanDelSurUrn, \"Jaclyn\")");
     }
     else if (testNum == 3)
     {
       START_TEST_GROUP("COUNT_VOTES 3");
-      assertEquals(countVotes(sanJuanDelSurUrn, "Baylor"), 2, "Test 3");
+      assertEquals( 2, countVotes(sanJuanDelSurUrn, "Baylor"), "Test 3");
      }
   }
   return 0;
