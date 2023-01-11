@@ -10,8 +10,13 @@ all: ${BINARIES}
 
 tests: ${BINARIES}
 	./test_countVotes 1
-	./test_tallyTheVote 1
+	./test_countVotes 2
+	./test_countVotes 3
+	./test_votedOut 2
 	./test_votedOut 1
+	./test_votedOut 3
+	./test_tallyTheVote 1
+
 	
 
 test_countVotes: test_countVotes.o ${COMMON_OBJECT_FILES}

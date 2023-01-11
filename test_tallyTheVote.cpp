@@ -23,8 +23,19 @@ int main(int argc, char* argv[]) {
     
       Parchment* sanJuanDelSurUrn = v1;
       HiddenImmunityIdol* huyopa = new HiddenImmunityIdol{"Natalie", "Jaclyn"};
+      cout << "Before calling tallyTheVote\n";
+      cout << "Original list: "<<endl;
+      cout << v1 << "->" << v2 << "->" << v3 << "->" << v4  << "->" << v5 << endl;
+
       Parchment* test1 = tallyTheVote(sanJuanDelSurUrn, huyopa);
+      cout << "Expected: "<<endl;
+      cout << "Actual:"<<endl;
+      cout << test1 <<endl;
+      cout << test1->next << endl;
+      cout << test1->next->next << endl;
+      cout << "After calling tallyTheVote\n";
       assertEquals("{Jaclyn, Baylor}->{Natalie, Baylor}", listToString(test1), "Test 1: Provided Example");
+      cout << "After calling assertEquals\n";
     }
     else if (testNum == 2) {
       START_TEST_GROUP("TALLY_THE_VOTE 2");

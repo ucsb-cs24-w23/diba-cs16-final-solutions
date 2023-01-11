@@ -8,6 +8,7 @@ std::string listToString(Parchment *head){
   string s = "";
   while(head){
     s += "{" + head->voter + ", " + head->vote + "}";
+    cout << s << endl;
     head = head->next;
     if(head){
       s+= "->";
